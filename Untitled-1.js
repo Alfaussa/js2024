@@ -45,7 +45,7 @@ console.log(search(array, 10))*/
 }
 const arr = [3, 2, 6, 4, 8, 5, 9, 10];
 const result = selectionSort(arr);
-console.log(result);*/
+console.log(result);
 
 // Recurtion
 
@@ -54,4 +54,25 @@ function f1(){
     t++;
     if (t === 100) return
     f1();
+}*/
+
+//Quick sort
+
+function quickSort(arr){
+    const {length} = arr;
+    if (length < 2) return arr;
+    const pivot = arr[Math.floor(Math.random() * (length))];
+    const left = [];
+    const right = []; 
+    const equal = [];
+    for (i = 0; i < length; i++){
+        if(arr[i] < pivot) {left.push(arr[i])}
+        else if (arr[i] > pivot) {right.push(arr[i])} else {equal.push(arr[i])}
+       
+    }
+    return [...quickSort(left),...equal,...quickSort(right)];
+    
 }
+const arr = [4, 7, 9, 2, 1, 5, 8, 10];
+const result = quickSort(arr);
+console.log(result);
