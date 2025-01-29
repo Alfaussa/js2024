@@ -30,7 +30,7 @@ function func(){
         console.log("no match")
     }
 }
-func();*/
+func();
 
 let str = 'строка';
 
@@ -40,4 +40,16 @@ function func(){
        
 }
 }
-func()
+func()*/
+
+let arr = [2, 5, 9, 34, 11];
+let result = 0;
+function func(){
+  
+    for (let i = 0; i < arr.length -1; i++){
+    if(arr[i] > 0 && arr[i] < 10){
+        result += arr[i]}
+    }
+}
+func();
+console.log(result);
