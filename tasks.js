@@ -40,7 +40,7 @@ function func(){
        
 }
 }
-func()*/
+func()
 
 let arr = [2, 5, 9, 34, 11];
 let result = 0;
@@ -53,3 +53,18 @@ function func(){
 }
 func();
 console.log(result);
+const str = 'abcde';
+
+     let result = Array.from(str);
+     console.log(result);
+
+     */
+
+    let num = 12345;
+    let arr = String(num).split('');
+    let sum = 0;
+    for(let digit of arr){
+        sum += Number(digit);
+    }
+    console.log(sum)
+     
