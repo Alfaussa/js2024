@@ -58,7 +58,6 @@ const str = 'abcde';
      let result = Array.from(str);
      console.log(result);
 
-     */
 
     let num = 12345;
     let arr = String(num).split('');
@@ -68,3 +67,39 @@ const str = 'abcde';
     }
     console.log(sum)
      
+     
+
+    let arr = [];
+    for(let i = 2; i <=100; i++){
+        if(i%2 == 0){
+            arr.push(i);
+        }
+       
+    }
+console.log(arr
+
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let arr3 = [...arr1,...arr2];
+console.log(arr3);)
+
+for (let i = 1; i <= 1000; i++){
+    let str = String(i);
+    if((parseInt(str[0])+ parseInt(str[1])) === 5){
+        console.log(i);
+    }
+}*/
+let arr =  [1, 2, 3, 4, 5, 6];
+let arrhalf1 = arr.length/2;
+
+
+let half1 = arr.slice(0, arr.length/2).reduce(function(sum, elem){
+    return sum + elem
+})
+let half2 = arr.slice(arr.length/2).reduce(function(sum, elem){
+    return sum + elem
+})
+let result = half2/half1;
+
+console.log(result)
+
