@@ -88,7 +88,7 @@ for (let i = 1; i <= 1000; i++){
     if((parseInt(str[0])+ parseInt(str[1])) === 5){
         console.log(i);
     }
-}*/
+}
 let arr =  [1, 2, 3, 4, 5, 6];
 let arrhalf1 = arr.length/2;
 
@@ -101,5 +101,14 @@ let half2 = arr.slice(arr.length/2).reduce(function(sum, elem){
 })
 let result = half2/half1;
 
-console.log(result)
+console.log(result)*/
 
+let str = '12,34,56';
+let arr = [];
+ arr = str.split(",").map(Number);
+ console.log(arr);
+let sum = arr.reduce(function(sum, elem)
+{
+    return sum + elem;
+})
+console.log(sum)
