@@ -101,7 +101,7 @@ let half2 = arr.slice(arr.length/2).reduce(function(sum, elem){
 })
 let result = half2/half1;
 
-console.log(result)*/
+console.log(result)
 
 let str = '12,34,56';
 let arr = [];
@@ -111,4 +111,19 @@ let sum = arr.reduce(function(sum, elem)
 {
     return sum + elem;
 })
-console.log(sum)
+console.log(sum)*/
+let str = 'aaa bbb ccc';
+let arr = str.split(' ');
+String.prototype.foo = function () { 
+    return this.charAt(0).toUpperCase() + this.slice(1);}
+let out = '';
+for(let i = 0; i < arr.length; i ++){
+    if(i == arr.length - 1){
+        out = out + arr[i].foo()
+    } else {
+        out = out + arr[i].foo() + ' ';
+    }
+}
+ 
+
+console.log(out)
