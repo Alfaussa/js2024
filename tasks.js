@@ -111,7 +111,7 @@ let sum = arr.reduce(function(sum, elem)
 {
     return sum + elem;
 })
-console.log(sum)*/
+console.log(sum)
 let str = 'aaa bbb ccc';
 let arr = str.split(' ');
 String.prototype.foo = function () { 
@@ -127,3 +127,10 @@ for(let i = 0; i < arr.length; i ++){
  
 
 console.log(out)
+
+let str = '1234567';
+
+
+var re = /(?=\B(?:\d{3})+(?!\d))/g;
+
+console.log( str.replace( re, ' ' ) );*/
