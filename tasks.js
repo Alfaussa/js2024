@@ -133,23 +133,31 @@ let str = '1234567';
 
 var re = /(?=\B(?:\d{3})+(?!\d))/g;
 
-console.log( str.replace( re, ' ' ) );*/
+console.log( str.replace( re, ' ' ) );
 
 let num = 123789;
 let arr = [];
 arr = num.toString().split('');
 
+function func (nums){
+    let res = nums.filter(function(num){
+        return num %2 ===0
+    });
+    return res;
+}
 
-function func(nums){
-    let arr1 =[];
- for(let i = 0; i < nums.length; i++){
-    let item = nums[i];
-    if (item % 2===0)arr1.push(item)
+let number = (func(arr)).join('')
 
-    }
-    return arr1;
- }
+console.log(number)
 
-let res = parseInt(func(arr).join().replace(',',''))
+let num = 123789;
+let arr = [];
+arr = num.toString().split('');
 
-console.log((res))
+function func (nums){
+    return nums.filter(num => num%2 === 0);
+}
+
+let number = (func(arr)).join('')
+
+console.log(number)*/
