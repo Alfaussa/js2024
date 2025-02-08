@@ -160,7 +160,7 @@ function func (nums){
 
 let number = (func(arr)).join('')
 
-console.log(number)*/
+console.log(number)
 
 let arr1 = [1, 2, 3];
 let arr2 = ['a', 'b', 'c'];
@@ -169,3 +169,30 @@ let arr = [...arr1.slice(0, 2), ...arr2,...arr1.slice(2)]
 
 
 console.log(arr);
+
+let arr = [1, 2, 3, 4, 5];
+for(let i = 0; i< arr.length; i++){
+    if(arr[i] === arr[i-1]){
+        console.log('yes')
+    }
+}*/
+
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3, 4, 5];
+function arrayDif(a,b){
+    for(let i = 0; i < a.length; i++){
+        for(let j = 0; j < b.length; j++){
+                let x = a.length - b.length;
+           if(b.length > a.length ){
+               res = b.pop()    
+            }  else {
+                return b
+            }
+            arrayDif(a,b)
+            }
+
+    }
+    
+}
+
+console.log(arrayDif(arr1, arr2))
