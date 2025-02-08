@@ -175,10 +175,10 @@ for(let i = 0; i< arr.length; i++){
     if(arr[i] === arr[i-1]){
         console.log('yes')
     }
-}*/
+}
 
-let arr1 = [1, 2, 3];
-let arr2 = [1, 2, 3, 4, 5];
+let arr1 = [1, 2, 3, 4,5];
+let arr2 = [7, 2, 5, 4, 5, 55, 44,33,45];
 function arrayDif(a,b){
     for(let i = 0; i < a.length; i++){
         for(let j = 0; j < b.length; j++){
@@ -195,4 +195,12 @@ function arrayDif(a,b){
     
 }
 
-console.log(arrayDif(arr1, arr2))
+console.log(arrayDif(arr1, arr2))*/
+
+let str = 'aaa bbb ccc eee fff';
+let arr = str.split(' ');
+const everyNth = (arr, n) => arr.filter((e, i) => i % n === 0);
+
+
+ 
+        console.log(everyNth(arr, 2));
