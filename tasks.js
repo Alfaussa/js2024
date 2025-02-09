@@ -195,7 +195,7 @@ function arrayDif(a,b){
     
 }
 
-console.log(arrayDif(arr1, arr2))*/
+console.log(arrayDif(arr1, arr2))
 
 let str = 'aaa bbb ccc eee fff';
 let arr = str.split(' ');
@@ -203,4 +203,35 @@ const everyNth = (arr, n) => arr.filter((e, i) => i % n === 0);
 
 
  
-        console.log(everyNth(arr, 2));
+        console.log(everyNth(arr, 2));*/
+      let arr =  [
+            [
+                [11, 12, 13],
+                [14, 15, 16],
+                [17, 17, 19],
+            ],
+            [
+                [21, 22, 23],
+                [24, 25, 26],
+                [27, 27, 29],
+            ],
+            [
+                [31, 32, 33],
+                [34, 35, 36],
+                [37, 37, 39],
+            ],
+        ]
+var arr1 = [];
+
+        for (let i =0; i< arr.length; i++){
+            for (let j =0; j< arr.length; j++){
+                for (let k =0; k< arr.length; k++)
+          arr1.push(arr[j][i][k])
+
+            }
+        }
+        let sum = 0;
+        arr1.forEach(function func(item){
+            sum += item;
+        })
+        console.log(sum)
