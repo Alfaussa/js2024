@@ -203,7 +203,7 @@ const everyNth = (arr, n) => arr.filter((e, i) => i % n === 0);
 
 
  
-        console.log(everyNth(arr, 2));*/
+        console.log(everyNth(arr, 2));
       let arr =  [
             [
                 [11, 12, 13],
@@ -235,3 +235,31 @@ var arr1 = [];
             sum += item;
         })
         console.log(sum)
+        
+
+        function setIsVisible(id){
+            let but = document.getElementById(id);
+            but.style.display  = 'block';
+        }*/
+
+let obj = {
+	1: {
+		1: 11,
+		2: 12,
+		3: 13,
+	},
+	2: {
+		1: 21,
+		2: 22,
+		3: 23,
+	},
+	3: {
+		1: 24,
+		2: 25,
+		3: 26,
+	},
+}
+function sum(obj){
+    return Object.values(obj).reduce((acc, item) =>{ acc += (item instanceof Object)?sum(item): item; return acc},0)
+}
+console.log(sum(obj));

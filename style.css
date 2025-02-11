@@ -5,4 +5,11 @@
     align-content: center;
     margin: 50px;
 }
-
+button{
+    height: 5em;
+    width: 10em;
+    margin: 5em;
+}
+#button2{
+    display: none;
+}
