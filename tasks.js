@@ -285,7 +285,7 @@ for(let i = 0; i<str.length; i ++){
 function quickSort(arr){
 
     if (arr.length < 2) return arr;
- let pivot = arr[Math.floor(Math.random()*(arr.length))];
+ let pivot = arr[0];
     let arrLeft = [];
     let arrRight = [];
     const equal = [];
@@ -303,11 +303,10 @@ return [...quickSort(arrLeft), ...equal, ...quickSort(arrRight)];
 }
 
 
-let arr = [ 3, 5, 1, 4, 2 ]
 
-// let num = 35142;
-// let arr = String(num).split('').map(Number);
-let result = quickSort(arr)
-console.log(result)
+let num = 35142;
+
+let arr = quickSort(String(num).split('').map(Number))
+console.log(quickSort(arr))
 
 
