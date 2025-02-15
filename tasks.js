@@ -285,7 +285,7 @@ for(let i = 0; i<str.length; i ++){
 function quickSort(arr){
 
     if (arr.length < 2) return arr;
- let pivot = arr[Math.floor(Math.random()*(arr.length))];
+ let pivot = arr[0];
     let arrLeft = [];
     let arrRight = [];
     const equal = [];
