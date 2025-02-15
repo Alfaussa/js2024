@@ -54,7 +54,7 @@ function f1(){
     t++;
     if (t === 100) return
     f1();
-}*/
+}
 
 //Quick sort
 
@@ -74,5 +74,24 @@ function quickSort(arr){
     
 }
 const arr = [4, 7, 9, 2, 1, 5, 8, 10];
+const result = quickSort(arr);
+console.log(result);*/
+function quickSort(arr){
+    const {length} = arr;
+    if (length < 2) return arr;
+    const pivot = arr[Math.floor(Math.random() * (length))];
+    const left = [];
+    const right = []; 
+    const equal = [];
+    for (i = 0; i < length; i++){
+        if(arr[i] < pivot) {left.push(arr[i])}
+        else if (arr[i] > pivot) {right.push(arr[i])} else {equal.push(arr[i])}
+       
+    }
+    return [...quickSort(left),...equal,...quickSort(right)];
+    
+}
+let num = 35142;
+let arr = String(num).split('').map(Number);
 const result = quickSort(arr);
 console.log(result);

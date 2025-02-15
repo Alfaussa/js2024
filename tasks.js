@@ -240,7 +240,7 @@ var arr1 = [];
         function setIsVisible(id){
             let but = document.getElementById(id);
             but.style.display  = 'block';
-        }*/
+        }
 
 let obj = {
 	1: {
@@ -263,3 +263,51 @@ function sum(obj){
     return Object.values(obj).reduce((acc, item) =>{ acc += (item instanceof Object)?sum(item): item; return acc},0)
 }
 console.log(sum(obj));
+let date1 = new Date(2025, 2,12);
+let date2 = new Date(2025,1, 12);
+
+dateDiff = Math.round(date2.getTime()- date1.getTime()) / (1000 * 
+	3600 * 24);
+console.log(dateDiff)
+
+let arr = [66, 35, 56, 77, 88];
+
+let str = arr.join();
+for(let i = 0; i<str.length; i ++){
+    if( i ==3){
+        console.log('there is 3')
+    } 
+}*/
+
+
+
+
+function quickSort(arr){
+
+    if (arr.length < 2) return arr;
+ let pivot = arr[Math.floor(Math.random()*(arr.length))];
+    let arrLeft = [];
+    let arrRight = [];
+    const equal = [];
+for (let i = 0; i < arr.length; i++){
+   
+if (arr[i] < pivot){
+    arrLeft.push(arr[i]);
+}else 
+if(arr[i]>pivot){
+    arrRight.push(arr[i])
+}else{
+    equal.push(arr[i])
+}}
+return [...quickSort(arrLeft), ...equal, ...quickSort(arrRight)];
+}
+
+
+let arr = [ 3, 5, 1, 4, 2 ]
+
+// let num = 35142;
+// let arr = String(num).split('').map(Number);
+let result = quickSort(arr)
+console.log(result)
+
+
